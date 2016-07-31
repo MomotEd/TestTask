@@ -1,0 +1,41 @@
+#LogoArea {
+    font-size: 40px;
+}
+
+#LoginText:before {
+    content: url(../img/logo.png)
+}
+
+input{
+    margin-top: 40px;
+}
+
+#sign-in{text-decoration:none; text-align:center;
+    margin-top: 5%;
+    height: 50px;
+    width: 200px;
+    padding:13px 21px;
+    border:solid 1px #afb3b5;
+    border-radius: 50px;
+    font:20px Arial, Helvetica, sans-serif;
+    color:#5da9e3;
+    background:#ffffff;
+
+}
+#sign-in:hover{
+     margin-top: 5%;
+     height: 50px;
+     width: 200px;
+     padding:13px 21px;
+     border:solid 1px #afb3b5;
+     border-radius: 50px;
+     font:20px Arial, Helvetica, sans-serif;
+     color:#ffffff;
+     background:#5da9e3;
+
+ }
+
+.row{
+    margin-top: 5%;
+    text-align: center;
+}
