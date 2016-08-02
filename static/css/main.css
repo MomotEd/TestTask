@@ -39,3 +39,7 @@ input{
     margin-top: 5%;
     text-align: center;
 }
+
+.loading{
+    margin-top: -0.625em;
+}

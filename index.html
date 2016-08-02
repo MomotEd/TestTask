@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Authentication">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/main.css"/>
+    <script src="static/js/angular.js"></script>
+    <script src="static/js/controller.js"></script>
     <title>test-task</title>
 </head>
 <body>
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4" id="main">
+        <div class="col-xs-4"></div>
+        <main class="col-xs-4">
             <header>
                 <div class="form-group" id="LogoArea">
                     <span id="LoginText">Login</span>
                 </div>
             </header>
-            <form role="form" target="uploader_iframe" style="padding: 10px" id="form">
+            <form  ng-controller="AuthenticationCtrl" ng-submit="Login()" role="form" target="uploader_iframe" style="padding: 10px" id="form">
+                <div class="form-group">
+                    <input ng-model="login" type="text" class="form-control" id="login" name="login" placeholder="Enter login" style="height:50px" required>
+                </div>
+                <div class="form-group">
+                    <input ng-model="password" type="password" class="form-control" id="password" name="password" placeholder="Password" style="height:50px" required>
+                    <text ng-if="showErrorMassage">Wrond login or password</text>
+                </div>
+                <button id="sign-in">
+                    <img ng-if="dataLoading" class="loading" src="static//img/dataLoading.png" alt="">
+                    <text ng-if="!dataLoading">{{buttonText}}&rarr;</text>
+                </button>
 
-                <div class="form-group">
-                    <input type="text" class="form-control" id="login" name="login" placeholder="Enter login" style="height:50px">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" style="height:50px">
-                </div>
-                <button id="sign-in">Login 	&rarr;</button>
             </form>
             <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
-        </div>
-        <div class="col-md-4"></div>
+        </main>
+        <div class="col-xs-4"></div>
     </div>
 </body>
 </html>
