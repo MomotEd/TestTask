@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/main.css"/>
     <script src="static/js/angular.js"></script>
-    <script src="static/js/angular-route.js"></script>
     <script src="static/js/controller.js"></script>
     <title>test-task</title>
 </head>
@@ -18,7 +17,7 @@
                     <span id="LoginText">Login</span>
                 </div>
             </header>
-            <form  ng-controller="AuthenticationCtrl" ng-submit="Login()" role="form" target="uploader_iframe" style="padding: 10px" id="form">
+            <form  ng-controller="AuthenticationCtrl" ng-submit="Login()" role="form"  style="padding: 10px" id="form">
 
                 <div class="form-group" ng-if="!HOTPrequired">
                     <input ng-model="login" type="text" class="form-control" id="login" name="login" placeholder="Enter login" style="height:50px" required>
@@ -39,9 +38,7 @@
                     <img ng-if="dataLoading" class="loading" src="static//img/dataLoading.png" alt="">
                     <text ng-if="!dataLoading">{{buttonText}}&rarr;</text>
                 </button>
-
             </form>
-            <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
         </main>
         <div class="col-xs-4"></div>
     </div>
