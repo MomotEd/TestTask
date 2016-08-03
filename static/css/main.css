@@ -22,18 +22,6 @@ input{
     background:#ffffff;
 
 }
-#sign-in:hover{
-     margin-top: 5%;
-     height: 50px;
-     width: 200px;
-     padding:13px 21px;
-     border:solid 1px #afb3b5;
-     border-radius: 50px;
-     font:20px Arial, Helvetica, sans-serif;
-     color:#ffffff;
-     background:#5da9e3;
-
- }
 
 .row{
     margin-top: 5%;
@@ -42,4 +30,8 @@ input{
 
 .loading{
     margin-top: -0.625em;
+}
+
+.errortext{
+    color: #ff0000;
 }
