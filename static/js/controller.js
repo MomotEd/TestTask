@@ -28,12 +28,13 @@ TestTaskApp.controller('AuthenticationCtrl', function ($scope, $http, $location)
             }
             else if(data==banned){
                 $scope.dataLoading = false;
-                $scope.showErrorMassage = "too many attempts to enter";
+                $scope.showErrorMassage = true;
+                $scope.ErrorMassage = "too many attempts to enter";
             }
             else if(data==vrongPass){
                 $scope.dataLoading = false;
                 $scope.showErrorMassage = true;
-                $scope.showErrorMassage = "wrong login or password";
+                $scope.ErrorMassage = "wrong login or password";
             }
             else if(data==HOTPRequired){
                 $scope.dataLoading = false;
